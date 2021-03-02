@@ -1,0 +1,53 @@
+body {
+  font-family: $font-base;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  font-style: normal;
+  font-weight: 400;
+  color: #000;
+  background: #fff;
+}
+ul{
+  list-style-type: none;
+}
+h1,h2{
+  font-family: $font-secondary;
+  letter-spacing: $letter-spacing-extra-small;
+}
+h1{
+  font-size: 28px;
+  font-weight: 400;
+  @media all and (min-width: $tablet-width){
+    font-size: 34px;
+  }
+  @media all and (min-width: $desktop-width){
+    font-size: $font-size-h1;
+  }
+}
+
+h2{
+  font-size: $font-size-h2;
+  font-weight: 500;
+}
+
+h3{
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: $letter-spacing-extra-small;
+}
+
+
+  p.description-heading{
+    margin: 0 0 8px;
+    letter-spacing: 9.7px;
+    text-transform: uppercase;
+    color: $color-orange;
+
+    & + h1{
+      margin-top: 0;
+    }
+
+    @media all and (min-width: $tablet-width){
+      font-size: $font-size-big;
+    }
+  }

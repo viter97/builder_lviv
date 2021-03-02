@@ -1,0 +1,251 @@
+.header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  background: transparent;
+  transition: $transition-base;
+  z-index: 300;
+
+  &--mobile-open,
+  &--scrolled {
+    background: #fff;
+    box-shadow: $shadow-base;
+  }
+
+  a {
+    transition: $transition-fast;
+
+    &:hover,
+    &:active {
+      color: $color-orange;
+    }
+  }
+
+  &__logo{
+    img{
+      display: block;
+      padding-bottom: 2px;
+    }
+  }
+
+  &__tel-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__tel {
+    letter-spacing: $letter-spacing-small;
+    font-weight: 400;
+    margin: 10px 0;
+    display: inline-flex;
+  }
+
+  &__top {
+    display: none;
+    background: rgba(0, 0, 0, 0.31);
+    transition: $transition-base;
+  }
+
+  &__main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: $header-height-mobile;
+  }
+
+  .social {
+    margin: 10px 0 20px;
+
+    &__icon {
+      width: 24px;
+      filter: $filter-black;
+
+      &:hover,
+      &:active {
+        filter: $filter-orange;
+      }
+    }
+  }
+
+  .nav-bar {
+    position: absolute;
+    left: -30px;
+    top: $header-height-mobile;
+    max-height: calc(100vh - #{$header-height-mobile});
+    transform: translateX(-100%);
+    width: calc(100% + 30px);
+    padding: 0 0 30px 45px;
+    background: #fff;
+    opacity: 0;
+    pointer-events: none;
+    transition: $transition-base;
+    z-index: 200;
+    overflow-y: auto;
+    letter-spacing: $letter-spacing-medium;
+
+    &--open {
+      transform: translateX(0);
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .order-a-call {
+      display: inline-flex;
+      color: #000;
+      border-color: #000;
+
+      &:hover,
+      &:active {
+        color: $color-orange;
+        border-color: $color-orange;
+      }
+    }
+
+    &__list {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding-left: 0;
+      margin: 0 0 10px;
+    }
+
+    &__item {
+      position: relative;
+      padding: 10px 0;
+      font-size: $font-size-big;
+      font-weight: 300;
+
+      a {
+        padding-bottom: 6px;
+        border-bottom: 3px solid transparent;
+
+        &:hover,
+        &:active {
+          border-bottom: 3px solid $color-orange;
+        }
+      }
+    }
+  }
+
+  @media all and (min-width: $tablet-width) {
+    .nav-bar {
+      padding: 0 0 30px 60px;
+    }
+  }
+
+  @media all and (min-width: $desktop-width) {
+    &--scrolled {
+      background: rgba(0, 0, 0, 0.31);
+
+      .header__top {
+        max-height: 0;
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      .header__main {
+        padding: 5px 0;
+        height: auto;
+      }
+
+    }
+    &__top {
+      opacity: 1;
+      max-height: $header-height-mobile;
+    }
+
+    a {
+      color: #fff;
+    }
+
+    &__top {
+      display: block;
+
+      .container {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        height: $header-height-mobile;
+      }
+    }
+
+    &__tel {
+      margin: -3px 49px 0 0;
+      color: #fff;
+    }
+
+    &__tel-container {
+      flex-direction: row;
+
+      & :last-child {
+        margin-right: 107px;
+      }
+    }
+
+    .social {
+      margin: 8px 10px 0 0;
+
+      &__icon {
+        width: auto;
+        filter: none;
+
+        &:hover,
+        &:active {
+          filter: $filter-orange;
+        }
+      }
+    }
+
+    &__main {
+      padding: 19px 0;
+      height: auto;
+    }
+
+
+    .nav-bar {
+      position: static;
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+      padding: 0;
+      opacity: 1;
+      transform: translateX(0);
+      pointer-events: auto;
+      background: transparent;
+
+      .order-a-call {
+        color: $color-orange;
+        border-color: $color-orange;
+
+        &:hover,
+        &:active {
+          background: $color-orange;
+          color: #fff;
+        }
+      }
+
+      &__list {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        padding-left: 0;
+        margin: 0 70px;
+      }
+
+      &__social,
+      &__tel {
+        display: none;
+      }
+    }
+  }
+  @media all and (min-width: $desktop-big-width) {
+    .nav-bar {
+      &__list {
+        margin: 0 184px 0 175px;
+      }
+    }
+  }
+}

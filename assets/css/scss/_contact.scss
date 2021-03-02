@@ -1,0 +1,92 @@
+input,
+textarea {
+  width: 100%;
+  border: none;
+  border-bottom: 0.5px solid #FFFFFF;
+  padding: 5px;
+  margin-bottom: 39px;
+  letter-spacing: 0.07em;
+  background: transparent;
+}
+
+label {
+  color: rgba(255, 255, 255, 0.72);
+  transition: $transition-fast;
+}
+
+.contact {
+  background: $color-orange-light;
+  color: #fff;
+
+  &__inner {
+    max-width: 740px;
+    padding: 45px 15px 39px;
+    margin: 0 auto;
+  }
+
+  &__heading {
+    line-height: 40px;
+    margin: 0 0 7px;
+  }
+
+  &__subheading {
+    margin: 0 0 36px;
+    font-weight: 400;
+    font-size: $font-size-big;
+    line-height: $line-height-small;
+    letter-spacing: 0.005em;
+  }
+
+  &-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &__input {
+      position: relative;
+      width: 100%;
+    }
+
+    & label {
+      position: absolute;
+      left: 0;
+      top: 6px;
+      letter-spacing: $letter-spacing-medium;
+    }
+
+    & input:focus ~ label,
+    & input:not(:focus):valid ~ label,
+    & textarea:focus ~ label,
+    & textarea:not(:focus):valid ~ label {
+      top: -12px;
+      font-size: 13px;
+    }
+
+    .btn {
+      margin-top: -3px;
+      &:hover,
+      &:active{
+        box-shadow: $shadow-base;
+      }
+    }
+  }
+
+  @media all and (min-width: $mobile-big-width){
+    &-form__input--half{
+      width: calc(50% - 10px);
+    }
+  }
+  @media all and (min-width: $tablet-width){
+    &__inner{
+      padding: 45px 0 39px 34px;
+    }
+
+    &-form__input--half{
+        width: 304px;
+    }
+    &-form__input--email{
+        width: 292px;
+    }
+  }
+}
+

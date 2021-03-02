@@ -1,0 +1,105 @@
+.reviews {
+  @include bg-base;
+
+  &__inner {
+    max-width: 500px;
+    padding: 50px 15px 0;
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+    @include blur;
+  }
+
+  &__text {
+    max-width: 566px;
+    margin: 0 auto;
+    font-weight: 200;
+    letter-spacing: 0.01em;
+    line-height: $line-height-extra-small;
+
+    a {
+      color: $color-orange;
+    }
+  }
+
+  &__author {
+    margin-top: 15px;
+    font-size: $font-size-bigger;
+    line-height: $line-height-small;
+    letter-spacing: $letter-spacing-small;
+  }
+
+  .swiper-container {
+    width: 100%;
+  }
+
+  .swiper-slide {
+    position: relative;
+    padding: 53px 0 46px;
+
+    &::before {
+      content: "“";
+      position: absolute;
+      right: -15px;
+      top: -163px;
+      font-family: $font-secondary;
+      font-size: 300px;
+      line-height: 1;
+      letter-spacing: 0.01em;
+      color: rgba(255, 255, 255, 0.12);
+      transform: rotate(180deg);
+    }
+  }
+
+  .slider__controls {
+    .swiper-button-next,
+    .swiper-button-prev {
+      filter: $filter-orange;
+    }
+
+    .swiper-button-next.swiper-button-disabled,
+    .swiper-button-prev.swiper-button-disabled {
+      filter: $filter-white;
+      opacity: 0.63;
+    }
+
+    .swiper-pagination {
+      &-bullet {
+        background: rgba(196, 196, 196, 0.45);
+      }
+
+      &-bullet-active {
+        background: $color-orange;
+      }
+    }
+  }
+
+  @media all and (min-width: $desktop-width) {
+    padding-left: 16px;
+
+    .description-heading,
+    &__heading {
+      padding-right: 3px;
+    }
+
+    .description-heading{
+      padding-left: 10px;
+    }
+
+    &__inner {
+      max-width: 766px;
+      padding: 75px 13px 40px 0;
+    }
+
+    .swiper-slide {
+      &::before {
+        right: 56px;
+        top: -163px;
+      }
+    }
+
+    .slider__controls {
+      padding-right: 3px;
+    }
+  }
+}

@@ -1,0 +1,182 @@
+.working-process {
+  padding: 50px 15px;
+  text-align: center;
+  background: #000;
+  color: #fff;
+
+  &__heading{
+    margin-bottom: 50px;
+  }
+
+  &__steps {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__step-number {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 66px;
+    height: 66px;
+    border: 1px solid #FFFFFF;
+    margin-bottom: 15px;
+    border-radius: 50%;
+    font-family: $font-secondary;
+    font-size: $font-size-h1;
+    line-height: 1;
+    overflow: visible;
+    span {
+      margin-top: -11px;
+    }
+    &::before{
+      position: absolute;
+      top: -2px;
+      right: -2px;
+    }
+  }
+
+  &__step-description {
+    margin-bottom: 15px;
+    font-size: $font-size-small;
+    letter-spacing: $letter-spacing-extra-small;
+    font-weight: 300;
+  }
+
+  &__step {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 160px;
+    text-align: center;
+    margin-bottom: 15px;
+    &::after {
+      content: "";
+      height: 25px;
+      width: 1px;
+      background: #fff;
+    }
+
+    &:nth-child(1) {
+      .working-process__step-number{
+        &::before{
+          content: url("../../assets/img/subtract-1.svg");
+          top: -18px;
+          right: 0;
+        }
+      }
+      .working-process__step-description{
+        left: -10px;
+      }
+    }
+    &:nth-child(2) {
+      .working-process__step-number{
+        &::before{
+          content: url("../../assets/img/subtract-2.svg");
+        }
+      }
+    }
+    &:nth-child(3) {
+      .working-process__step-number{
+        &::before{
+          content: url("../../assets/img/subtract-3.svg");
+        }
+        span {
+          margin-left: -2px;
+          margin-top: -15px;
+        }
+      }
+      .working-process__step-description {
+        font-size: $font-size-base;
+      }
+    }
+    &:nth-child(4) {
+      .working-process__step-number{
+        &::before{
+          content: url("../../assets/img/subtract-4.svg");
+        }
+        span {
+          margin-left: -2px;
+          margin-top: -15px;
+        }
+      }
+      .working-process__step-description {
+        font-size: $font-size-base;
+      }
+    }
+    &:nth-child(5) {
+      .working-process__step-number{
+        &::before{
+          content: url("../../assets/img/subtract-5.svg");
+        }
+      }
+      .working-process__step-description {
+        font-size: $font-size-base;
+      }
+    }
+    &:nth-child(6) {
+      &::after {
+        content: none;
+      }
+      .working-process__step-number{
+        &::before{
+          content: url("../../assets/img/subtract-6.svg");
+        }
+        span {
+          margin-top: -6px;
+          margin-left: -2px;
+        }
+      }
+      .working-process__step-description {
+        left: -48px;
+        font-size: $font-size-base;
+      }
+    }
+  }
+
+  @media all and (min-width: $desktop-width) {
+    padding: 65px 0 213px;
+    text-align: left;
+
+    &__heading{
+      margin-bottom: 97px;
+    }
+
+    &__inner {
+      max-width: 1106px;
+      margin: 0 auto;
+    }
+    &__steps {
+      max-width: 1057px;
+      padding-left: 29px;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+    &__step {
+      align-items: flex-start;
+      text-align: left;
+      margin-bottom: 0;
+
+      &::after {
+        position: absolute;
+        width: 127px;
+        height: 1px;
+        top: 32px;
+        left: 100%;
+      }
+    }
+    &__step-number{
+      margin-bottom: 0;
+    }
+
+    &__step-description {
+      position: absolute;
+      top: 96px;
+      width: 174px;
+    }
+  }
+}

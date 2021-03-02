@@ -1,0 +1,44 @@
+.slider__controls {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 94px;
+
+  .swiper-pagination {
+    position: static;
+    margin: -3px 25px 0;
+    cursor: pointer;
+
+    &-bullet {
+      width: 6px;
+      height: 6px;
+      margin: 0 11px;
+      background: rgba(255, 255, 255, 0.45);
+      transition: $transition-fast;
+      opacity: 1;
+    }
+
+    &-bullet-active {
+      transform: scale(1.5);
+      background: #FFFFFF;
+      box-shadow: $shadow-orange-small;
+    }
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    position: static;
+    margin: 0;
+  }
+
+  .swiper-button-next {
+    transform: rotate(180deg);
+  }
+
+  .swiper-button-next:after,
+  .swiper-button-prev:after {
+    content: none;
+  }
+}

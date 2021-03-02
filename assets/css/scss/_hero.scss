@@ -1,0 +1,134 @@
+.hero {
+  padding-top: 120px;
+  color: #fff;
+  @include bg-base;
+
+  &__heading {
+    margin: 0 0 30px;
+    font-weight: 300;
+  }
+
+  &__subheading {
+    font-size: $font-size-big;
+    margin: 0 0 60px;
+    font-weight: 200;
+  }
+
+  &__inner {
+    position: relative;
+    max-width: 500px;
+    padding: 0 30px;
+    margin: 0 auto;
+  }
+
+  .btn {
+    margin-left: 3px;
+  }
+
+  @media all and (min-width: $tablet-width) {
+    &__inner {
+      max-width: 700px;
+    }
+  }
+  @media all and (min-width: $desktop-width) {
+    padding-top: 271px;
+    &__inner {
+      max-width: 858px;
+      padding: 0 0 0 44px;
+
+      &::after{
+        content: url("../img/hero-arrow.svg");
+        position: absolute;
+        left: 42px;
+        bottom: -145px;
+        display: block;
+      }
+    }
+  }
+}
+
+.benefits {
+  margin-top: 100px;
+  @include blur;
+  border-top: 1px solid rgba(255, 255, 255, 0.46);
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100%;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: calc(50% - 15px);
+    min-height: 100px;
+    font-size: $font-size-bigger;
+    letter-spacing: $letter-spacing-extra-small;
+    max-width: 160px;
+    font-weight: 500;
+
+
+    &:nth-child(2n) {
+      margin-left: 20px;
+    }
+
+    img {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  @media all and (min-width: 540px) {
+    &__item {
+      margin: 10px 20px;
+
+      &:nth-child(2n) {
+        margin: 10px 20px;
+      }
+    }
+  }
+
+  @media all and (min-width: 880px) {
+    &__inner {
+      flex-wrap: nowrap;
+    }
+    &__item {
+      width: auto;
+    }
+  }
+  @media all and (min-width: $desktop-width) {
+    margin-top: 248px;
+    height: auto;
+    padding: 30px 0 40px;
+    &__inner {
+      justify-content: space-between;
+    }
+    &__item {
+      margin: 0;
+      min-width: 165px;
+      max-width: 220px;
+      &:nth-child(2n) {
+        margin: 0;
+      }
+    }
+
+    &__item:nth-child(2){
+      min-width: 183px;
+    }
+    &__item:nth-child(3){
+      min-width: 217px;
+    }
+    &__item:nth-child(4){
+      min-width: 184px;
+    }
+    &__item:nth-child(5){
+      min-width: 162px;
+    }
+  }
+}

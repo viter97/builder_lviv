@@ -1,0 +1,75 @@
+.about-us{
+
+  &__image-container{
+    position: relative;
+    min-height: 480px;
+    @include bg-base;
+  }
+
+  .experience{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 238px;
+    height: 220px;
+    padding: 20px 0 0 34px;
+    font-size: $font-size-h2;
+    letter-spacing: $letter-spacing-extra-small;
+    background: $color-orange-light;
+    color: #fff;
+    &__count{
+      font-family: $font-secondary;
+      line-height: $line-height-small;
+      font-size: 70px;
+    }
+    &__years{
+      margin: 0;
+      font-weight: 300;
+    }
+  }
+
+  &__info{
+    padding: 50px 15px;
+    background-position: bottom right;
+    p:not(.description-heading){
+      margin-bottom: 25px;
+      letter-spacing: $letter-spacing-extra-small;
+      color: #7C7C7C;
+    }
+  }
+  &__info > *{
+    max-width: 542px;
+  }
+  &__heading{
+    margin: 0 0 27px 0;
+  }
+
+  @media all and (min-width: $desktop-width){
+    display: flex;
+    font-size: $font-size-big;
+    letter-spacing: $letter-spacing-big;
+
+    &__image-container{
+      min-width: 547px;
+      min-height: 766px;
+    }
+
+    &__info{
+      width: 100%;
+      padding: 148px 30px 100px 60px;
+      margin: 0 auto;
+      background-position: 97% 236%;
+    }
+  }
+  @media all and (min-width: $desktop-big-width){
+    &__image-container{
+      min-width: 37.7%;
+      min-height: 766px;
+    }
+
+    &__info{
+      padding: 148px 0 100px;
+      margin: 0 auto 0 188px;
+    }
+  }
+}

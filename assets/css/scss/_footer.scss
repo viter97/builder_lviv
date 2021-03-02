@@ -1,0 +1,146 @@
+.footer {
+  background: #000;
+  color: #fff;
+
+  a {
+    color: #fff;
+
+    &:hover,
+    &:active {
+      color: $color-orange;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 15px;
+  }
+
+  &__info {
+    max-width: 310px;
+    margin: 14px 0 23px;
+    font-weight: 300;
+    line-height: 25px;
+    letter-spacing: -0.7px;
+  }
+
+  .nav-bar {
+    &__list{
+      margin-top: 0;
+    }
+
+    &__item {
+      margin: 0 0 20px 0;
+
+    }
+  }
+
+  .address{
+    font-weight: 300;
+    line-height: $line-height-small;
+    p{
+      margin-top: 0;
+    }
+    strong{
+      font-weight: 500;
+    }
+  }
+
+  &__tel{
+    display: inline-flex;
+    margin-bottom: 20px;
+  }
+
+  .social__icon {
+    opacity: 0.2;
+
+    &:hover,
+    &:active {
+      opacity: 1;
+    }
+  }
+
+  @media all and (min-width: $tablet-width){
+    &__inner {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 50px 30px;
+    }
+    .social{
+      flex-direction: column;
+      &__icon{
+        width: 19px;
+        margin: 0 0 21px 0;
+      }
+    }
+  }
+
+  @media all and (min-width: $desktop-width){
+    &__inner {
+      justify-content: flex-start;
+      flex-wrap: nowrap;
+      max-width: 1000px;
+      padding: 103px 30px 40px;
+      margin: 0 auto;
+    }
+
+    &__logo-container{
+      margin: -9px 147px 0 0;
+    }
+
+    &__info {
+      margin: 14px 0 0;
+    }
+
+    .nav-bar{
+      width: 200px;
+      margin-right: 125px;
+    }
+
+    .social{
+      padding-top: 11px;
+    }
+
+    .address{
+      width: 250px;
+      margin-right: 145px;
+      p{
+        margin: 4px 0 44px;
+      }
+    }
+  }
+
+  @media all and (min-width: $desktop-big-width){
+    &__inner {
+      max-width: 1282px;
+      padding: 153px 0 70px 85px;
+    }
+    &__logo-container{
+      margin-top: -9px;
+    }
+  }
+}
+
+.copyright {
+  border-top: 0.5px solid rgba(255, 255, 255, 0.29);
+  padding: 14px 0 18px;
+  font-size: $font-size-small;
+  line-height: $line-height-small;
+  letter-spacing: 0.005em;
+  color: rgba(255, 255, 255, 0.29);
+
+  p {
+    margin: 0;
+    padding: 0 15px;
+    text-align: center;
+
+    @media all and (min-width: $desktop-big-width){
+      max-width: 1274px;
+      padding-left: 85px;
+      margin: 0 auto;
+      text-align: left;
+    }
+  }
+}

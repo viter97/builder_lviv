@@ -1,0 +1,58 @@
+/*================================================================
+Style structure
+================================================================*/
+/*
+    Base
+    --------------------------
+    Resize-animation-stopper
+*/
+/*================================================================
+Base
+================================================================*/
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.img-container {
+  display: block;
+
+  & > img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.nav-bar__list {
+  padding-left: 0;
+}
+
+/*================================================================
+Resize-animation-stopper
+================================================================*/
+.resize-animation-stopper * {
+  animation: none !important;
+  transition: none !important;
+}
+
+/*================================================================
+Resize-animation-stopper
+================================================================*/
+.enable-js {
+  text-align: center;
+  font-size: $font-size-bigger;
+
+  a{
+    text-decoration: underline;
+    color: $color-orange;
+  }
+}

@@ -1,0 +1,55 @@
+/*Fonts*/
+$font-base: 'Gilroy', sans-serif;
+$font-secondary: 'Playfair Display', serif;
+$letter-spacing-big: 0.2em;
+$letter-spacing-medium: 0.07em;
+$letter-spacing-small: -0.015em;
+$letter-spacing-extra-small: 0.2px;
+$line-height-extra-small: 18px;
+$line-height-small: 1.2;
+$line-height-base: 1.4;
+$font-size-small: 14px;
+$font-size-base: 16px;
+$font-size-big: 18px;
+$font-size-bigger: 20px;
+$font-size-h1: 40px;
+$font-size-h2: 30px;
+
+/*header height*/
+$header-height-mobile: 54px;
+
+/*Colors*/
+$color-orange: #FF9900;
+$color-orange-light: #FFB800;
+
+/*Transitions*/
+$transition-base: all 0.35s ease;
+$transition-fast: all 0.2s ease;
+
+/*Filters*/
+/*link - https://codepen.io/sosuke/pen/Pjoqqp*/
+$filter-black: brightness(0) saturate(100%);
+$filter-white: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(2%) hue-rotate(180deg) brightness(108%) contrast(101%);
+$filter-orange: brightness(0) saturate(100%) invert(62%) sepia(60%) saturate(2736%) hue-rotate(0deg) brightness(103%) contrast(104%);
+
+/*media queries*/
+$mobile-big-width: 440px;
+$tablet-width: 768px;
+$tablet-big-width: 900px;
+$desktop-width: 1024px;
+$desktop-big-width: 1400px;
+
+/*shadows*/
+$shadow-base: 0 4px 10px rgba(0, 0, 0, 0.06);
+$shadow-orange-small: 0 0 4px rgba(255, 153, 0, 0.43);
+$shadow-orange: 1px 1px 18px 4px rgba(255, 153, 0, 0.32);
+
+/*mixins*/
+@mixin blur {
+  backdrop-filter: blur(11px);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+@mixin bg-base {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
